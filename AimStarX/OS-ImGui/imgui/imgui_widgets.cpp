@@ -1071,10 +1071,6 @@ struct tab_state
     ImVec4 image, text;
     float background_opticaly = 0.f;
 };
-namespace font
-{
-    extern ImFont* inter_bold;
-}
 
 
 bool ImGui::Tabs(bool selected, ImTextureID image, const char* label, const ImVec2& size_arg, ImGuiButtonFlags flags)
@@ -1125,7 +1121,7 @@ bool ImGui::Tabs(bool selected, ImTextureID image, const char* label, const ImVe
 
     GetWindowDrawList()->AddImage(image, image_bb.Min, image_bb.Max, ImVec2(0, 0), ImVec2(1, 1), GetColorU32(it_anim->second.image));
 
-    GlowText(font::inter_bold, 17.f, label, bb.Min + ImVec2(34, (size_arg.y - CalcTextSize(label).y) / 2), GetColorU32(it_anim->second.text));
+    GlowText(ImGui::GetFont(), 17.f, label, bb.Min + ImVec2(34, (size_arg.y - CalcTextSize(label).y) / 2), GetColorU32(it_anim->second.text));
 
 
     return pressed;
@@ -1182,7 +1178,7 @@ bool ImGui::SubTab(bool selectable, const char* label, const ImVec2& size_arg)
     //  PushStyleColor(ImGuiCol_Text, GetColorU32(it_anim->second.text));
     //  RenderTextClipped(bb.Min, bb.Max - ImVec2(0, it_anim->second.text_offset), label, NULL, &label_size, ImVec2(0.5, 0.5), &bb);
 
-    GlowText(font::inter_bold, 17.f, label, bb.Min + ImVec2((size_arg.x - CalcTextSize(label).x) / 2, (size_arg.y - CalcTextSize(label).y) / 2), GetColorU32(it_anim->second.text));
+    GlowText(ImGui::GetFont(), 17.f, label, bb.Min + ImVec2((size_arg.x - CalcTextSize(label).x) / 2, (size_arg.y - CalcTextSize(label).y) / 2), GetColorU32(it_anim->second.text));
 
 
     //  PopStyleColor();
@@ -2232,8 +2228,8 @@ struct combo_state {
 
 namespace pic
 {
-    extern ID3D11ShaderResourceView* combo_widget;
-    extern ID3D11ShaderResourceView* input_widget;
+    inline ID3D11ShaderResourceView* combo_widget;
+    inline ID3D11ShaderResourceView* input_widget;
 
 }
 
@@ -3533,10 +3529,6 @@ struct slider_state {
     int number_count;
 };
 
-namespace font
-{
-    extern ImFont* inter_bold;
-}
 
 bool ImGui::SliderScalar(const char* label, ImGuiDataType data_type, void* p_data, const void* p_min, const void* p_max, const char* format, ImGuiSliderFlags flags)
 {
@@ -3620,7 +3612,7 @@ bool ImGui::SliderScalar(const char* label, ImGuiDataType data_type, void* p_dat
 
     }
 
-    ImGui::GlowText(font::inter_bold, 17.f, value_buf, ImVec2(frame_bb.Max.x - CalcTextSize(value_buf).x, frame_bb.Min.y - 22), GetColorU32(c::accent));
+    ImGui::GlowText(ImGui::GetFont(), 17.f, value_buf, ImVec2(frame_bb.Max.x - CalcTextSize(value_buf).x, frame_bb.Min.y - 22), GetColorU32(c::accent));
 
     GetWindowDrawList()->AddText(ImVec2(frame_bb.Max.x - w, frame_bb.Min.y - 22), GetColorU32(it_anim->second.text), label);
 
@@ -6966,7 +6958,7 @@ bool ImGui::Selectable(const char* label, bool selected, ImGuiSelectableFlags fl
 
     it_anim->second.text = ImLerp(it_anim->second.text, selected ? c::accent : hovered ? c::text::text_hov : c::text::text, g.IO.DeltaTime * 6.f);
 
-    PushFont(font::inter_bold);
+    PushFont(ImGui::GetFont());
     PushStyleColor(ImGuiCol_Text, GetColorU32(it_anim->second.text));
     RenderTextClipped(text_min, text_max, label, NULL, &label_size, style.SelectableTextAlign, &bb);
     PopStyleColor();

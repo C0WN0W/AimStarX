@@ -440,24 +440,6 @@ public:
 		CloseHandle(hSnapshot);
 		return 0;
 	}
-	HMODULE GetProcessModuleHandle(std::string ModuleName)
-	{
-		MODULEENTRY32 ModuleInfoPE;
-		ModuleInfoPE.dwSize = sizeof(MODULEENTRY32);
-		HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPMODULE, this->ProcessID);
-		Module32First(hSnapshot, &ModuleInfoPE);
-		USES_CONVERSION;
-		do {
-			if (strcmp(W2A(ModuleInfoPE.szModule), ModuleName.c_str()) == 0)
-			{
-				CloseHandle(hSnapshot);
-				return ModuleInfoPE.hModule;
-			}
-		} while (Module32Next(hSnapshot, &ModuleInfoPE));
-		CloseHandle(hSnapshot);
-		return 0;
-	}
-
 #endif // R3
 };
 

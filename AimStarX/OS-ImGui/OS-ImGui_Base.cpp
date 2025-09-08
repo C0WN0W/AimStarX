@@ -1,14 +1,5 @@
 #include "OS-ImGui_Base.h"
 
-/****************************************************
-* Copyright (C)	: Liv
-* @file			: OS-ImGui_Base.cpp
-* @author		: Liv
-* @email		: 1319923129@qq.com
-* @version		: 1.1
-* @date			: 2024/4/4 13:59
-****************************************************/
-
 namespace OSImGui
 {
     bool OSImGui_Base::InitImGui(ID3D11Device* device, ID3D11DeviceContext* device_context)

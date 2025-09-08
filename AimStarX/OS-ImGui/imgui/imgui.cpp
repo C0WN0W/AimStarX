@@ -5286,11 +5286,6 @@ ImVec2 ImGui::GetItemRectSize()
     return g.LastItemData.Rect.GetSize();
 }
 
-namespace font
-{
-    extern ImFont* inter_bold;
-}
-
 bool ImGui::CustomBeginChildEx(const char* name, ImGuiID id, const ImVec2& size_arg, bool border, ImGuiWindowFlags flags)
 {
     ImGuiContext& g = *GImGui;
@@ -5313,7 +5308,7 @@ bool ImGui::CustomBeginChildEx(const char* name, ImGuiID id, const ImVec2& size_
     ImGui::GetWindowDrawList()->AddRectFilled(parent_window->DC.CursorPos, parent_window->DC.CursorPos + ImVec2(size_arg), ImGui::GetColorU32(c::child::background), c::child::rounding);
     ImGui::GetWindowDrawList()->AddRect(parent_window->DC.CursorPos, parent_window->DC.CursorPos + ImVec2(size_arg), ImGui::GetColorU32(c::child::outline), c::child::rounding);
 
-    GlowText(font::inter_bold, 17.f, name, parent_window->DC.CursorPos + ImVec2(10, (35 - CalcTextSize(name).y) / 2), GetColorU32(c::accent));
+    GlowText(ImGui::GetFont(), 17.f, name, parent_window->DC.CursorPos + ImVec2(10, (35 - CalcTextSize(name).y) / 2), GetColorU32(c::accent));
 
     const char* temp_window_name;
     if (name)

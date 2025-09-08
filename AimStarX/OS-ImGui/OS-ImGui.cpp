@@ -1,14 +1,6 @@
 #pragma once
 #include "OS-ImGui.h"
 
-/****************************************************
-* Copyright (C)	: Liv
-* @file			: OS-ImGui.cpp
-* @author		: Liv
-* @email		: 1319923129@qq.com
-* @version		: 1.0
-* @date			: 2023/9/17	11:25
-****************************************************/
 
 // OS-ImGui Draw »æÖÆ¹¦ÄÜ
 namespace OSImGui

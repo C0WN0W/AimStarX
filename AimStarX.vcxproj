@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -176,7 +176,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;R3;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;R3;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -188,10 +188,61 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AimStarX\Cheats.cpp" />
+    <ClCompile Include="AimStarX\Features\Menu.cpp" />
     <ClCompile Include="AimStarX\main.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_draw.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_tables.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\buffer.c" />
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hde32.c" />
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hde64.c" />
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hook.c" />
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\trampoline.c" />
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui_Base.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui_External.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AimStarX\Cheats.hpp" />
+    <ClInclude Include="AimStarX\Features\Menu.hpp" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\font.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imconfig.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_freetype.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_internal.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_settings.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_rectpack.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_textedit.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_truetype.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\buffer.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\hde32.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\hde64.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\MinHook.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\pstdint.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\table32.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\table64.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\trampoline.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Base.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Exception.hpp" />
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_External.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Struct.h" />
     <ClInclude Include="AimStarX\Utils\ProcessManager.hpp" />
+    <ClInclude Include="AimStarX\View.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AimStarX\OS-ImGui\Minhook\MinHook.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AimStarX\OS-ImGui\freetype.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

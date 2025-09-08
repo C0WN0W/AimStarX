@@ -18,10 +18,153 @@
     <ClCompile Include="AimStarX\main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_draw.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx9.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx11.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_win32.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_tables.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_widgets.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\buffer.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hde32.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hde64.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\hook.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Minhook\trampoline.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui_Base.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\OS-ImGui_External.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\Cheats.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\Features\Menu.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AimStarX\Utils\ProcessManager.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\font.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imconfig.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_freetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx9.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx11.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_impl_win32.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_internal.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui_settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_rectpack.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_textedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\imgui\imstb_truetype.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\buffer.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\hde32.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\hde64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\MinHook.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\pstdint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\table32.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\table64.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Minhook\trampoline.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Base.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Exception.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_External.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Struct.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\View.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\Cheats.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\Features\Menu.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AimStarX\OS-ImGui\Minhook\MinHook.def">
+      <Filter>源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="AimStarX\OS-ImGui\freetype.lib" />
   </ItemGroup>
 </Project>
