@@ -158,6 +158,9 @@
     <ClInclude Include="AimStarX\Features\Menu.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\stb\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="AimStarX\OS-ImGui\Minhook\MinHook.def">

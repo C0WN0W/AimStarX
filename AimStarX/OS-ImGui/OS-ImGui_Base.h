@@ -1,6 +1,7 @@
 #pragma once
 #include "OS-ImGui_Struct.h"
 #include "OS-ImGui_Exception.hpp"
+#include "stb/stb_image.h"
 #include <iostream>
 #include <string>
 #include <functional>

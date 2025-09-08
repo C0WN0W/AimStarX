@@ -235,6 +235,7 @@
     <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Exception.hpp" />
     <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_External.h" />
     <ClInclude Include="AimStarX\OS-ImGui\OS-ImGui_Struct.h" />
+    <ClInclude Include="AimStarX\OS-ImGui\stb\stb_image.h" />
     <ClInclude Include="AimStarX\Utils\ProcessManager.hpp" />
     <ClInclude Include="AimStarX\View.hpp" />
   </ItemGroup>
