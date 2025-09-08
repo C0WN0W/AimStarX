@@ -69,6 +69,12 @@
     <ClCompile Include="AimStarX\Features\Menu.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AimStarX\Features\Images\Images.hpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="AimStarX\Features\Images\Images.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AimStarX\Utils\ProcessManager.hpp">

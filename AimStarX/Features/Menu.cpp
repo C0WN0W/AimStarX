@@ -1,7 +1,21 @@
 #include "Menu.hpp"
+#include "Images/Images.hpp"
+#include <iostream>
+
+ID3D11ShaderResourceView* ASX = NULL;
+int ASXw = 0, ASXh = 0;
+
+void LoadImages()
+{
+	if (ASX == NULL)
+	{
+		Gui.LoadTextureFromMemory(Image::ASX, sizeof Image::ASX, &ASX, &ASXw, &ASXh);
+	}
+}
 
 void GUI::DrawCallBack() noexcept
 {
+	LoadImages();
 	ImGuiStyle* style = &ImGui::GetStyle();
 
 	style->WindowPadding = ImVec2(0, 0);
@@ -20,6 +34,7 @@ void GUI::DrawCallBack() noexcept
 		const ImVec2& region = ImGui::GetContentRegionMax();
 
 		ImGui::GetBackgroundDrawList()->AddRectFilled(pos, pos + region, ImGui::GetColorU32(c::bg::background), c::bg::rounding);
-
+		
+		ImGui::GetBackgroundDrawList()->AddImage((void*)ASX, pos + spacing, pos + ImVec2(ASXw * 0.15f, ASXh * 0.15f));
 	}
 }

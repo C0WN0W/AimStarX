@@ -189,6 +189,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AimStarX\Cheats.cpp" />
+    <ClCompile Include="AimStarX\Features\Images\Images.cpp" />
+    <ClCompile Include="AimStarX\Features\Images\Images.hpp" />
     <ClCompile Include="AimStarX\Features\Menu.cpp" />
     <ClCompile Include="AimStarX\main.cpp" />
     <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui.cpp" />
