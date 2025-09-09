@@ -193,6 +193,7 @@
     <ClCompile Include="AimStarX\Features\Images\Images.hpp" />
     <ClCompile Include="AimStarX\Features\Menu.cpp" />
     <ClCompile Include="AimStarX\main.cpp" />
+    <ClCompile Include="AimStarX\OS-ImGui\Fonts.cpp" />
     <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui.cpp" />
     <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_draw.cpp" />
     <ClCompile Include="AimStarX\OS-ImGui\imgui\imgui_impl_dx11.cpp" />
@@ -211,7 +212,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AimStarX\Cheats.hpp" />
+    <ClInclude Include="AimStarX\Configs.hpp" />
     <ClInclude Include="AimStarX\Features\Menu.hpp" />
+    <ClInclude Include="AimStarX\OS-ImGui\Fonts.hpp" />
     <ClInclude Include="AimStarX\OS-ImGui\imgui\font.h" />
     <ClInclude Include="AimStarX\OS-ImGui\imgui\imconfig.h" />
     <ClInclude Include="AimStarX\OS-ImGui\imgui\imgui.h" />

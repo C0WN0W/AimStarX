@@ -1,4 +1,5 @@
 #include "OS-ImGui_Base.h"
+#include "Fonts.hpp"
 
 namespace OSImGui
 {
@@ -10,9 +11,13 @@ namespace OSImGui
         ImFontAtlas* fontAtlas = new ImFontAtlas();
         ImFontConfig arialConfig;
         arialConfig.FontDataOwnedByAtlas = false;
-        ImFont* arialFont = fontAtlas->AddFontFromFileTTF("c:\\Windows\\Fonts\\ebrimabd.ttf", 20.0f, &arialConfig, io.Fonts->GetGlyphRangesChineseFull());
+
+        ImFont* arialFont = fontAtlas->AddFontFromMemoryTTF(Fonts::Rainbow, sizeof Fonts::Rainbow, 20.f, &arialConfig, io.Fonts->GetGlyphRangesCyrillic());
 
         io.Fonts = fontAtlas;
+
+        ImFont* TitleFont = io.Fonts->AddFontFromMemoryTTF(Fonts::Corna, sizeof Fonts::Corna, 30.f);
+        ImFont* ChineseFont = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ebrimabd.ttf", 20.0f, &arialConfig, io.Fonts->GetGlyphRangesChineseFull());
 
         ImGui::StyleColorsDark();
         io.LogFilename = nullptr;

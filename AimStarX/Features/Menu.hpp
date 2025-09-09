@@ -1,5 +1,5 @@
 #pragma once
-#include "../OS-ImGui/OS-ImGui.h"
+#include "../Configs.hpp"
 
 namespace GUI
 {

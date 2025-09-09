@@ -75,6 +75,9 @@
     <ClCompile Include="AimStarX\Features\Images\Images.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="AimStarX\OS-ImGui\Fonts.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AimStarX\Utils\ProcessManager.hpp">
@@ -165,6 +168,12 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="AimStarX\OS-ImGui\stb\stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\OS-ImGui\Fonts.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AimStarX\Configs.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
