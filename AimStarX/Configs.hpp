@@ -1,7 +1,10 @@
 #pragma once
 #include "OS-ImGui/OS-ImGui.h"
 
-namespace Other
+namespace Configs
 {
-	
+	namespace ESP
+	{
+		inline bool Enable = false;
+	}
 }

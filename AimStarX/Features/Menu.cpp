@@ -61,5 +61,17 @@ void GUI::DrawCallBack() noexcept
 			if (ImGui::SubTab(3 == tabs, "Config", ImVec2(75, 60))) tabs = 3;
 		}
 		ImGui::EndGroup();
+
+		ImGui::SetCursorPos(ImVec2(spacing.x, spacing.y + 137));
+
+		ImGui::BeginGroup();
+		{
+			ImGui::CustomBeginChild("ESP", ImVec2(region.x - spacing.x * 2, region.y - spacing.y * 2 - 137));
+			{
+				ImGui::Checkbox("Enable", &Configs::ESP::Enable);
+			}
+			ImGui::CustomEndChild();
+		}
+		ImGui::EndChild();
 	}
 }
