@@ -12,7 +12,7 @@ namespace OSImGui
         ImFontConfig arialConfig;
         arialConfig.FontDataOwnedByAtlas = false;
 
-        ImFont* arialFont = fontAtlas->AddFontFromMemoryTTF(Fonts::Rainbow, sizeof Fonts::Rainbow, 20.f, &arialConfig, io.Fonts->GetGlyphRangesCyrillic());
+        ImFont* arialFont = fontAtlas->AddFontFromMemoryTTF(Fonts::HFS, sizeof Fonts::HFS, 20.f, &arialConfig, io.Fonts->GetGlyphRangesCyrillic());
 
         io.Fonts = fontAtlas;
 
