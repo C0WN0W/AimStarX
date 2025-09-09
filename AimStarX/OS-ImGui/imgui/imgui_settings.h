@@ -8,7 +8,7 @@ namespace c {
 	{
 
 		inline ImVec4 background = ImColor(0, 0, 0, 200);
-		inline ImVec2 size = ImVec2(480, 610);
+		inline ImVec2 size = ImVec2(400, 610);
 		inline float rounding = 9.f;
 
 	}

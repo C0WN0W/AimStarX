@@ -2,6 +2,9 @@
 #include "Images/Images.hpp"
 #include <iostream>
 
+DWORD picker_flags = ImGuiColorEditFlags_NoSidePreview | ImGuiColorEditFlags_AlphaBar | ImGuiColorEditFlags_NoInputs | ImGuiColorEditFlags_AlphaPreview;
+
+
 ID3D11ShaderResourceView* ASX = NULL;
 int ASXw = 0, ASXh = 0;
 
@@ -24,7 +27,7 @@ void GUI::DrawCallBack() noexcept
 	style->ItemSpacing = ImVec2(20, 20);
 	style->ScrollbarSize = 8.f;
 
-	static float color[4] = { 1.f, 0.5f, 0.f, 1.f };
+	static float color[4] = { 1.f, 0.3f, 0.f, 1.f };
 	c::accent = { color[0], color[1], color[2], 1.f };
 
 	static int tabs = 0;
@@ -41,7 +44,7 @@ void GUI::DrawCallBack() noexcept
 		ImGui::GetBackgroundDrawList()->AddRect(pos + spacing, pos + ImVec2(region.x - spacing.x, spacing.y + 45), ImGui::GetColorU32(c::child::outline), c::child::rounding);
 		// I don't like this pattern =(
 		// ImGui::GetBackgroundDrawList()->AddImage((void*)ASX, pos + spacing, pos + ImVec2(ASXw * 0.15f, ASXh * 0.15f));
-		ImGui::GlowText(io.Fonts->Fonts[1], 30.f, "AimStar", pos + ImVec2(0, spacing.y + 10) + ImVec2(region.x / 3, 0), ImGui::GetColorU32(c::accent));
+		ImGui::GlowText(io.Fonts->Fonts[1], 25.f, "AimStar", pos + ImVec2(5, spacing.y + 13) + ImVec2(region.x / 3, 0), ImGui::GetColorU32(c::accent));
 		
 		ImGui::GetBackgroundDrawList()->AddRectFilled(pos + spacing + ImVec2(0,60), pos + ImVec2(region.x - spacing.x, 140), ImGui::GetColorU32(c::child::background), c::child::rounding);
 		ImGui::GetBackgroundDrawList()->AddRect(pos + spacing + ImVec2(0, 60), pos + ImVec2(region.x - spacing.x, 140), ImGui::GetColorU32(c::child::outline), c::child::rounding);
@@ -69,6 +72,8 @@ void GUI::DrawCallBack() noexcept
 			ImGui::CustomBeginChild("ESP", ImVec2(region.x - spacing.x * 2, region.y - spacing.y * 2 - 137));
 			{
 				ImGui::Checkbox("Enable", &Configs::ESP::Enable);
+				ImGui::Pickerbox("Box ESP", &Configs::ESP::Box, Configs::ESP::BoxCol, picker_flags);
+				ImGui::Pickerbox("Line ESP", &Configs::ESP::Line, Configs::ESP::LineCol, picker_flags);
 			}
 			ImGui::CustomEndChild();
 		}

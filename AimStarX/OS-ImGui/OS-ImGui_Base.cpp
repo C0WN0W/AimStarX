@@ -12,11 +12,11 @@ namespace OSImGui
         ImFontConfig arialConfig;
         arialConfig.FontDataOwnedByAtlas = false;
 
-        ImFont* arialFont = fontAtlas->AddFontFromMemoryTTF(Fonts::HFS, sizeof Fonts::HFS, 20.f, &arialConfig, io.Fonts->GetGlyphRangesCyrillic());
+        ImFont* arialFont = fontAtlas->AddFontFromMemoryTTF(Fonts::HFS, sizeof Fonts::HFS, 15.f, &arialConfig, io.Fonts->GetGlyphRangesCyrillic());
 
         io.Fonts = fontAtlas;
 
-        ImFont* TitleFont = io.Fonts->AddFontFromMemoryTTF(Fonts::Corna, sizeof Fonts::Corna, 30.f);
+        ImFont* TitleFont = io.Fonts->AddFontFromMemoryTTF(Fonts::Corna, sizeof Fonts::Corna, 17.f);
         ImFont* ChineseFont = io.Fonts->AddFontFromFileTTF("c:\\Windows\\Fonts\\ebrimabd.ttf", 20.0f, &arialConfig, io.Fonts->GetGlyphRangesChineseFull());
 
         ImGui::StyleColorsDark();
