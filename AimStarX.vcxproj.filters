@@ -176,6 +176,9 @@
     <ClInclude Include="AimStarX\Configs.hpp">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="AimStarX\Offsets.hpp">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="AimStarX\OS-ImGui\Minhook\MinHook.def">

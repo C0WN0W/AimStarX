@@ -214,6 +214,7 @@
     <ClInclude Include="AimStarX\Cheats.hpp" />
     <ClInclude Include="AimStarX\Configs.hpp" />
     <ClInclude Include="AimStarX\Features\Menu.hpp" />
+    <ClInclude Include="AimStarX\Offsets.hpp" />
     <ClInclude Include="AimStarX\OS-ImGui\Fonts.hpp" />
     <ClInclude Include="AimStarX\OS-ImGui\imgui\font.h" />
     <ClInclude Include="AimStarX\OS-ImGui\imgui\imconfig.h" />
